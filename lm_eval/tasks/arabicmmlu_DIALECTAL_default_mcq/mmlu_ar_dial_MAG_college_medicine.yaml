@@ -1,0 +1,7 @@
+"dataset_name": "MAG_college_medicine"
+"description": "The following are multiple choice questions (with answers) about college\
+  \ medicine.\n\n"
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MAG_tasks"
+"task": "mmlu_ar_dial_MAG_college_medicine_tasks"
+"task_alias": "MAG: college medicine"

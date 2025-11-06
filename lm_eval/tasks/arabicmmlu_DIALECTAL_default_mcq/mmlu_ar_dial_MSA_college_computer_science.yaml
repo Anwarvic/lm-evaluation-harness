@@ -1,0 +1,7 @@
+"dataset_name": "MSA_college_computer_science"
+"description": "The following are multiple choice questions (with answers) about college\
+  \ computer science.\n\n"
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_MSA_tasks"
+"task": "mmlu_ar_dial_MSA_college_computer_science_tasks"
+"task_alias": "MSA: college computer science"

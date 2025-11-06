@@ -1,0 +1,7 @@
+"dataset_name": "EGY_high_school_macroeconomics"
+"description": "The following are multiple choice questions (with answers) about high\
+  \ school macroeconomics.\n\n"
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_EGY_tasks"
+"task": "mmlu_ar_dial_EGY_high_school_macroeconomics_tasks"
+"task_alias": "EGY: high school macroeconomics"
