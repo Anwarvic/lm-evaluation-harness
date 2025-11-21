@@ -1,7 +1,7 @@
 dataset_kwargs:
   data_files:
     test:
-    - poetry_analysis/analysis_poet_name___meter.json
+    - /home/abdelrahman.sadallah/mbzuai/arab_poetry/data/poetry_analysisFannOrFlop_50verses_lm_harness_format/analysis_poet_name___meter.json
 dataset_name: null
 dataset_path: json
 include: _default_poetry_analysis_template_yaml
