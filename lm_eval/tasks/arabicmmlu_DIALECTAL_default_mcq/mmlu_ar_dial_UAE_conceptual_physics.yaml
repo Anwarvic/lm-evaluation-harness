@@ -1,0 +1,7 @@
+"dataset_name": "UAE_conceptual_physics"
+"description": "The following are multiple choice questions (with answers) about conceptual\
+  \ physics.\n\n"
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_UAE_tasks"
+"task": "mmlu_ar_dial_UAE_conceptual_physics_tasks"
+"task_alias": "UAE: conceptual physics"

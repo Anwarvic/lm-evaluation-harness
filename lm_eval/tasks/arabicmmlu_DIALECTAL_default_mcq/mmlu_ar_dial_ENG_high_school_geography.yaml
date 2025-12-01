@@ -1,0 +1,7 @@
+"dataset_name": "ENG_high_school_geography"
+"description": "The following are multiple choice questions (with answers) about high\
+  \ school geography.\n\n"
+"include": "_default_template_yaml"
+"tag": "mmlu_ar_dial_ENG_tasks"
+"task": "mmlu_ar_dial_ENG_high_school_geography_tasks"
+"task_alias": "ENG: high school geography"
