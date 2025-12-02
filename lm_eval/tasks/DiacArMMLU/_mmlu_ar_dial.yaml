@@ -1,10 +1,10 @@
 group: mmlu_ar_dial
 task:
+# - mmlu_ar_dial_ENG
+# - mmlu_ar_dial_MSA
 - mmlu_ar_dial_EGY
-- mmlu_ar_dial_ENG
 - mmlu_ar_dial_KSA
 - mmlu_ar_dial_MAG
-- mmlu_ar_dial_MSA
 - mmlu_ar_dial_SYR
 - mmlu_ar_dial_UAE
 aggregate_metric_list:
