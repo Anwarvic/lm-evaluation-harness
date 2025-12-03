@@ -1,0 +1,5 @@
+task: SAHM-arabic-business-mcq
+include: _default_mcq_template_yaml
+
+metadata:
+  dataset_path: SahmBenchmark/arabic-business-mcq_eval

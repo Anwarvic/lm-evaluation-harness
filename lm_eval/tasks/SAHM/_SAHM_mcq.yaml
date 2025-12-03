@@ -1,0 +1,9 @@
+group: SAHM_mcq
+metadata:
+    description: SAHM mcq Benchmarks
+    version: 0
+task:
+- SAHM-accounting-mcq
+- SAHM-arabic-business-mcq
+- SAHM-fatwa-mcq-evaluation_standardized
+- SAHM_Sentiment_Analysis_MCQ

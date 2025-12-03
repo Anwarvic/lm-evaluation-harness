@@ -1,0 +1,5 @@
+task: SAHM_Sentiment_Analysis_MCQ
+include: _default_mcq_template_yaml
+
+metadata:
+  dataset_path: SahmBenchmark/Sentiment_Analysis_MCQ_eval
