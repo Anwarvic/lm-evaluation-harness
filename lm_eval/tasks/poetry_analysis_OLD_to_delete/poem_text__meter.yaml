@@ -1,11 +1,11 @@
 dataset_kwargs:
   data_files:
     test:
-    - ./poetry/50_verses/analysis_poem_text___genre.json
+    - ./poetry_60verses/ar_poem_text__meter.json
 dataset_name: null
 dataset_path: json
 include: _default_poetry_analysis_template_yaml
-tag: poem_text__genre_task
-task: poem_text__genre
-# task_alias: poem_text__genre
+tag: poem_text__meter_task
+task: poem_text__meter
+# task_alias: ar_poem_text__meter
 test_split: test

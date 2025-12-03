@@ -294,4 +294,3 @@ class GeminiCompletionsAPI(LocalChatCompletion):
                     )
 
         return res
-
