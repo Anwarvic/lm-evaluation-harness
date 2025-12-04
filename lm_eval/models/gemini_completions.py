@@ -252,9 +252,14 @@ class GeminiCompletionsAPI(LocalChatCompletion):
     def parse_generations(outputs: Union[Dict, List[Dict]], **kwargs) -> List[str]:
         """
         Extracts the generated text from a Gemini API response.
-        
-        This simplified method assumes only one candidate is requested
-        and just extracts the first available text.
+
+        Behavior:
+        - Normal case: returns generated text from candidates.
+        - If the response includes 'PROHIBITED_CONTENT' either in:
+            * promptFeedback.blockReason
+            * candidates[0].finishReason
+        → returns ['PROHIBITED_CONTENT']
+        - Otherwise raises ValueError for unexpected formats.
         """
         res = []
         if not isinstance(outputs, list):
@@ -262,14 +267,30 @@ class GeminiCompletionsAPI(LocalChatCompletion):
 
         for out in outputs:
             try:
-                # Since candidateCount=1, we just take the first candidate
-                # at index 0 and the first text part at index 0.
+                # Normal generation case
                 text = out["candidates"][0]["content"]["parts"][0]["text"]
                 res.append(text)
             except (KeyError, IndexError, TypeError, AttributeError):
-                # Handles cases where 'candidates', 'content', 'parts', 
-                # or 'text' are missing, or if 'parts' is empty
-                # (e.g., for a safety-blocked response).
-                raise ValueError("Unexpected output format from Gemini API response. The recieved response is: {}".format(out))
-                
+                block_reason = None
+
+                # Case 1: Blocked response at top-level
+                if isinstance(out, dict):
+                    block_reason = out.get("promptFeedback", {}).get("blockReason")
+
+                    # Case 2: finishReason inside candidates
+                    if not block_reason:
+                        try:
+                            block_reason = out["candidates"][0].get("finishReason")
+                        except (KeyError, IndexError, TypeError, AttributeError):
+                            raise ValueError(
+                            f"Unexpected output format from Gemini API response. The received response is: {out}"
+                        )
+
+                if block_reason == "PROHIBITED_CONTENT":
+                    res.append("PROHIBITED_CONTENT")
+                else:
+                    raise ValueError(
+                        f"Unexpected output format from Gemini API response. The received response is: {out}"
+                    )
+
         return res

@@ -1,0 +1,5 @@
+task: SAHM-fatwa-mcq-evaluation_standardized
+include: _default_mcq_template_yaml
+
+metadata:
+  dataset_path: SahmBenchmark/fatwa-mcq-evaluation_standardized
