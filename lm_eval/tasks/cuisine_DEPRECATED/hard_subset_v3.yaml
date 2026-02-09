@@ -1,27 +1,24 @@
-task: dream_interpretation_arabic
+task: cuisine_hard_subset
 dataset_path: json
 dataset_name: null
 dataset_kwargs:
   data_files:
-    test: ./dream_interpretation_v2_mcq/arabic.json
+    test: ./cuisine/hard_subset_v3.json
 test_split: test
 
 output_type: multiple_choice
 
 doc_to_text: |
-  موجه النظام: أنت مساعد مفيد.
-  موجه المستخدم:
-  ### السؤال
+  أجب عن السؤال باستخدام الخيار المناسب من بين A أو B أو C أو D أو E. الرجاء الرد بالحرف الصحيح فقط: A أو B أو C أو D أو E دون أي شرح أو معلومات إضافية.
   {{ question }}
-  ### الخيارات
+  الاختيارات:
   {% for option in options %}
   {{ option }}
   {% endfor %}
-  =============
-  أجب عن السؤال أعلاه بإرجاع الخيار فقط (A أو B أو C أو D أو E) دون أي شرح إضافي.
-
+  الإجابة:
 doc_to_choice: !function utils.doc_to_choice
 doc_to_target: !function utils.doc_to_target
+
 
 metric_list:
   - metric: acc
@@ -33,4 +30,3 @@ metric_list:
 
 metadata:
   version: 1.0
-  description: "Dream interpretation task for Arabic dreams with Arabic questions"

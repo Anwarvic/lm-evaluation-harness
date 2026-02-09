@@ -43,7 +43,7 @@ def filter_test_split(input_file, output_file):
 def main():
     # Define source and destination paths
     source_dir = "/home/abdelrahman.sadallah/mbzuai/Jais-dream-interpretation/data/9-mcqs"
-    dest_dir = "/home/abdelrahman.sadallah/mbzuai/lm-evaluation-harness/lm_eval/tasks/dream_interpretation_v2/data"
+    dest_dir = "./dream_interpretation_v2_mcq"
     
     # File mappings: source_filename -> destination_filename
     file_mappings = {

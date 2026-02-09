@@ -3,7 +3,7 @@ dataset_path: json
 dataset_name: null
 dataset_kwargs:
   data_files:
-    test: /home/abdelrahman.sadallah/mbzuai/lm-evaluation-harness/lm_eval/tasks/dream_interpretation_v2/data/arabic-english.json
+    test: ./dream_interpretation_v2_mcq/arabic-english.json
 test_split: test
 
 output_type: multiple_choice
